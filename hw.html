@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #photo{
+            position: absolute;
+            background-color: orange;
+            border-radius: 3px 3px;
+            width: 50px;
+            height: 30px;
+            left: 8px;
+            transition-duration: 0.8s;
+            z-index: 10;
+            top: 208px;
+            
+        }
+        #date_time{
+            background-color: orange;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px 25px;        
+            left: 280px;
+            top: 20px;
+            z-index: 10;
+        }
+        #date_time span{
+            margin-left: 10px;
+            display: block;
+            color: aliceblue;
+        }
+        #big_box{
+            border-radius: 3px;
+            width: 340px;
+            height: 400px;
+            overflow: hidden;
+            box-shadow: 0 0 10px 5px grey;
+        }
+        #picture1{
+            background-image: url(image/青岛.jpg);
+            background-size: contain;
+            background-origin: padding-box;
+            transition-property:"background-color";
+            transition-duration: 0.5s;
+            width: 340px;
+            height: 230px;
+            z-index: 1;
+        }
+        #photo span{
+            display: inline-block;
+            color: aliceblue;
+            margin-left: 7px;
+            margin-top: 3px;
+        }
+        #picture2{
+            background-color: white;
+            margin-top: -1px;
+            transition-duration: 0.5s;
+            width: 340px;
+            height: 300px;
+            z-index: 10;
+        }
+        #big_box:hover #picture2{
+            transform: translate(0,-60px);
+        }
+        #big_box:hover #photo{
+            transform: translate(0,-60px);                
+        }
+        #picture2 span{
+            display: block;
+        }
+        #big_box:hover #picture1{
+            transform:scale(1.3,1.3);   
+            box-shadow: 0 0 500px 70px grey;
+                        
+        }
+        #big_box:hover #hiding{
+            display: block;
+            margin-left: 20px;
+        }
+        
+        #text1{
+            margin-left: 20px;
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+        #text2{
+            margin-left: 20px;
+            color: orangered;
+            font-size: 20px;
+        }
+        #hiding{
+            color: grey;
+            width: 300px;
+            display: none;  
+        }
+        #the_last{
+            width: 340px;
+            height: 30px;
+            position: absolute;
+            top:380px;
+            color: gray;
+            font-size: 14px;
+            background-color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="big_box">
+            <div id="picture1"></div>
+            <div id="date_time">
+                <span>&nbsp15</span>
+                <span>五月</span>
+            </div>
+            <div id="picture2">
+                <span id="text1">青岛栈桥</span>
+                <span id="text2">国家AAAA级旅游景区</span>
+                <div id="hiding">青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区，也是首批国家AAAA级旅游景区。</div>
+            </div>
+            <div id="photo"><span>照片</span></div>
+            
+            <div id="the_last">&nbsp&nbsp&nbsp 10分钟前&nbsp&nbsp&nbsp 123评论</div>
+        </div>
+    </body>
+</html>
